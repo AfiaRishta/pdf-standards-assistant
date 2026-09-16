@@ -73,7 +73,7 @@ Limitations
 
 Stated honestly, because knowing the edges matters:
 
-Scanned documents have imperfect text layers, so answers drawn from them can be correct but harder to highlight precisely — these surface as unverified. Better OCR or a clean digital source resolves it.
+Scanned documents have imperfect text layers, so answers drawn from them can be correct but harder to highlight precisely these surface as unverified. Better OCR or a clean digital source resolves it.
 Complex tables with many conditions (e.g. multiple variables per row) are the hardest case; the system reads the table as an image and asks the model to state the row and column used, but full robustness here is future work.
 Cross-document questions are supported by retrieving across all documents, but multi-hop reasoning is the next area to strengthen.
 Non-determinism: an LLM may phrase a quote slightly differently between runs, so the same question can verify one run and not the next. Page-neighbour and fragment fallbacks reduce this; normalised fuzzy matching would reduce it further.
