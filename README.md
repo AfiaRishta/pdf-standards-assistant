@@ -46,22 +46,24 @@ Everything except the LLM call runs locally. Only the short, relevant excerpts f
 
 Running it
 bash
-# 1. install dependencies
+### 1. install dependencies
 pip install -r requirements.txt
 
-# 2. add one or more PDFs to the docs/ folder
-#    (any text-based or scanned PDF works)
+### 2. add one or more PDFs to the docs/ folder
+(any text-based or scanned PDF works)
 
-# 3. set your LLM API key as an environment variable
-#    (PowerShell)  $env:LLM_API_KEY = "your-key"
-#    (bash)        export LLM_API_KEY="your-key"
+### 3. set your LLM API key as an environment variable
+(PowerShell)  $env:LLM_API_KEY = "your-key"
+(bash)        export LLM_API_KEY="your-key"
 
-# 4. extract the pages, then build the search indexes
+### 4. extract the pages, then build the search indexes
 python ingest.py
 python build_index.py
 
-# 5. launch the app
+### 5. launch the app
 streamlit run app.py
+
+
 
 Then open the local URL Streamlit prints, and ask a question about your documents.
 
