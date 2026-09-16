@@ -1,0 +1,8 @@
+docs/
+data/
+*.pdf
+*.png
+.env
+__pycache__/
+*.pkl
+*.npy

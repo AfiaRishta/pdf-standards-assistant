@@ -1,0 +1,31 @@
+# Test questions for the scorecard.
+# One question per line. Lines starting with # are ignored.
+# Edit freely - swap in questions you know the real answer to.
+
+# --- AS 1684.2-2021 (framing) - clean document, should verify well ---
+What is the minimum bearing length for a floor joist?
+What is the minimum bearing for framing members at their ends?
+What does breadth mean for a timber member?
+What standard must visually graded sawn timber conform to?
+What is the maximum spacing for floor joists?
+
+# --- AS 2870-2011 (slabs and footings) - scanned, may be unverified ---
+What site classes are defined for reactive clay sites?
+What is a Class M site?
+What is the minimum characteristic strength of concrete for footings?
+What is the minimum cover to reinforcement in a slab?
+
+# --- ABCB Housing Provisions 2022 - mixed ---
+What is the minimum ceiling height for a habitable room?
+What is the minimum ceiling height for a bathroom?
+What are the requirements for a smoke alarm location?
+
+# --- AS 1428.1-2009 (access) - scanned, may be unverified ---
+What is the minimum width of an accessible walkway?
+What is the maximum gradient for an accessible ramp?
+What is the minimum circulation space at a doorway?
+
+# --- Trick questions - answer is NOT in any of the four documents ---
+What is the minimum swimming pool fence height?
+What is the minimum R-value for ceiling insulation in Melbourne?
+How deep must an electrical cable be buried?
