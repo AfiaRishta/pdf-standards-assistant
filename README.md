@@ -11,6 +11,7 @@ Large language models are confident even when they're wrong. That's a dealbreake
 This project adds a verification layer on top of retrieval: every answer must be backed by a quote that is programmatically confirmed to exist on the cited page. The model is never the final authority on a fact deterministic code is.
 
 How it works
+
 <img width="437" height="781" alt="image" src="https://github.com/user-attachments/assets/a30a7f54-a8b5-49d4-81c0-8a48285db19f" />
 
 1 · Retrieve. For a question, the system scores every chunk with two methods and merges the results: BM25 keyword search (wins on exact codes and identifiers) and semantic embeddings (wins on reworded questions that share no keywords). The top few clauses go forward.
