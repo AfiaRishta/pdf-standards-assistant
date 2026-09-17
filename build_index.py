@@ -1,16 +1,3 @@
-"""
-Day 2, Steps 6 and 7 - turn the extracted pages into searchable chunks.
-
-What it does:
-  - reads data/pages.json (made by ingest.py)
-  - splits each document into "chunks", one per clause / table / figure
-  - builds two search indexes over those chunks:
-        BM25       = keyword search (good for codes like "Class M", "MGP10")
-        embeddings = meaning search (good for reworded questions)
-  - saves everything into data/ for the app to use
-
-Run:  python build_index.py
-"""
 import json
 import re
 import pickle
@@ -119,7 +106,6 @@ def main():
     np.save(DATA / "embeddings.npy", embeddings)
 
     print(f"\nSaved chunks.json, bm25.pkl, embeddings.npy to data/")
-
 
 if __name__ == "__main__":
     main()
