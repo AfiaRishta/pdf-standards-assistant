@@ -1,16 +1,3 @@
-"""
-Day 2, Steps 8, 9, 10 - the actual tool.
-
-Flow when you ask a question:
-  8  retrieve : find the 6 most relevant chunks (keyword + meaning search)
-  9  answer   : Gemini answers using ONLY those chunks, and must quote its source
-  10 verify   : code checks each quote really exists on the cited page,
-                highlights it in yellow, and shows the page. Quotes that
-                can't be found are dropped and the answer is marked unverified.
-
-Run:  streamlit run app.py
-(Needs the GEMINI_API_KEY set in the same terminal.)
-"""
 import os
 import io
 import json
@@ -32,7 +19,7 @@ MODEL = "gemini-3.6-flash"      # cheap, fast, reads images and text
 TOP_K = 6                       # how many chunks to send to Gemini
 
 
-# ---------- load everything once ----------
+#  load everything once
 @st.cache_resource
 def load_all():
     chunks = json.loads((DATA / "chunks.json").read_text(encoding="utf-8"))
@@ -44,7 +31,7 @@ def load_all():
     return chunks, bm25, embeddings, embedder, client
 
 
-# ---------- Step 8: retrieval ----------
+# ---------- retrieval ----------
 def retrieve(question, chunks, bm25, embeddings, embedder, k=TOP_K):
     # keyword scores
     bm_scores = bm25.get_scores(question.lower().split())
@@ -66,7 +53,7 @@ def retrieve(question, chunks, bm25, embeddings, embedder, k=TOP_K):
     return [chunks[i] for i in best]
 
 
-# ---------- Step 9: ask Gemini ----------
+# ----------  ask Gemini ----------
 def build_prompt(question, retrieved):
     blocks = []
     for i, c in enumerate(retrieved, 1):
@@ -132,7 +119,7 @@ def ask_gemini(client, question, retrieved):
         return {"answer": resp.text, "found": False, "citations": []}
 
 
-# ---------- Step 10: verify + highlight ----------
+# ----------  verify + highlight ----------
 def find_pdf(document_name):
     """Match Gemini's document name back to a file in docs/."""
     for p in DOCS.glob("*.pdf"):
