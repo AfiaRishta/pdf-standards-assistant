@@ -1,14 +1,3 @@
-"""
-Day 3 - run a list of test questions automatically and save a scorecard.
-
-It reuses everything from app.py (retrieval, Gemini answer, verification),
-runs each question in questions.txt, and writes scorecard.csv.
-
-Run:  python evaluate.py
-(Needs GEMINI_API_KEY set in the same terminal, same as the app.)
-
-Open scorecard.csv in Excel afterwards and fill in the last columns by hand.
-"""
 import csv
 import time
 from pathlib import Path
