@@ -1,8 +1,3 @@
-"""
-Step 3 - Check whether each PDF has real text or is a scanned image.
-
-Run:  python check_pdfs.py
-"""
 from pathlib import Path
 import fitz  # this is PyMuPDF
 
