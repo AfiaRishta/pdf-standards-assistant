@@ -1,18 +1,3 @@
-"""
-Steps 4 and 5 - Extract every page of every PDF into data/.
-
-For each page this saves:
-  - page number (1-based, matches what the inspector sees)
-  - full text
-  - text blocks with bounding boxes (needed for highlighting later)
-  - a PNG image of the page (shown in the app later)
-If a page has no text layer, it is OCR'd with Tesseract.
-
-Run:  python ingest.py
-Output:
-  data/pages.json          <- one record per page, all documents
-  data/images/<doc>/p0001.png ...
-"""
 import json
 from pathlib import Path
 import fitz  # PyMuPDF
